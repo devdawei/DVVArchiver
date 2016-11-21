@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <DVVCoding.h>
 
-@interface Test : NSObject
+@interface Test : NSObject <DVVCodingDelegate>
 
 @property (nonatomic, copy) NSString *token;
 @property (nonatomic, assign) NSUInteger userID;

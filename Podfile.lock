@@ -1,0 +1,22 @@
+PODS:
+  - DVVCoding (1.0.0)
+
+DEPENDENCIES:
+  - DVVCoding (from `https://github.com/devdawei/DVVCoding.git`, tag `v1.0.0`)
+
+EXTERNAL SOURCES:
+  DVVCoding:
+    :git: https://github.com/devdawei/DVVCoding.git
+    :tag: v1.0.0
+
+CHECKOUT OPTIONS:
+  DVVCoding:
+    :git: https://github.com/devdawei/DVVCoding.git
+    :tag: v1.0.0
+
+SPEC CHECKSUMS:
+  DVVCoding: f2fc97ea6980aa44d08db2da982dcaa4d189c531
+
+PODFILE CHECKSUM: 073f3af78fdfa9bfa2a856e534dd0ae124d40359
+
+COCOAPODS: 1.0.1

@@ -27,8 +27,9 @@ NSString * const kTestArchiverFileName = @"kTestArchiverFileName";
     NSLog(@"%@\n\n", [DVVArchiver pathWithType:DVVArchiverTypeCaches]);
     NSLog(@"%@\n\n", [DVVArchiver pathWithType:DVVArchiverTypePreferences]);
     NSLog(@"%@\n\n", [DVVArchiver pathWithType:DVVArchiverTypeTmp]);
-    
-//    [DVVArchiver removeFileWithType:DVVArchiverTypePreferences name:kTestArchiverFileName];
+//    /* 删除缓存 */
+//    BOOL s = [DVVArchiver removeFileWithType:DVVArchiverTypePreferences name:kTestArchiverFileName];
+//    NSLog(@"删除缓存: %zi", s);
     
     if ([DVVArchiver fileExistsWithType:DVVArchiverTypePreferences name:kTestArchiverFileName])
     {
@@ -41,12 +42,16 @@ NSString * const kTestArchiverFileName = @"kTestArchiverFileName";
     }
     else
     {
-        NSLog(@"没有有缓存文件！");
+        NSLog(@"没有缓存文件！");
+        
         Test *t = [Test new];
         t.token = @"kdljflhvbhoewirowepuroiwe";
         t.userID = 123456;
         t.name = @"大威";
-        [DVVArchiver archiverWithType:DVVArchiverTypePreferences object:t name:kTestArchiverFileName];
+        BOOL s = [DVVArchiver archiverWithType:DVVArchiverTypePreferences object:t name:kTestArchiverFileName];
+        if (s) NSLog(@"缓存成功");
+        else NSLog(@"缓存失败");
+    }
 }
 
 - (void)didReceiveMemoryWarning
